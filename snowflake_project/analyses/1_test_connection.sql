@@ -1,2 +1,2 @@
 select *
-from {{ source('snowflake_staging', 'bookings') }}
+from {{ source('snowflake_staging', 'hosts') }}
