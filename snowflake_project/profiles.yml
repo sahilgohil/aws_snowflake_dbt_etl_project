@@ -1,0 +1,13 @@
+snowflake_project:
+  outputs:
+    dev:
+      account: LYICMKC-DC17760
+      password: tXVyNvBbjW9mcUx
+      database: DBT_DEV
+      role: ACCOUNTADMIN
+      schema: STAGING
+      threads: 1
+      type: snowflake
+      user: SAHILGOHIL11
+      warehouse: COMPUTE_WH
+  target: dev
