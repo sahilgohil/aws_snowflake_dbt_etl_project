@@ -1,0 +1,12 @@
+version: 2.0
+
+models:
+    - name: silver_bookings
+      config:
+        materialized: incremental
+        unique_key: booking_id
+    - name: silver_listings
+      config:
+        materialized: incremental
+        unique_key: listing_id
+      

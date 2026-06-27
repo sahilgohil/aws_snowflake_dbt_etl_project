@@ -1,0 +1,4 @@
+select 
+    *,
+    {{ tag('price_per_night') }} as price_per_night_tag
+from {{ ref('bronze_listings') }}
