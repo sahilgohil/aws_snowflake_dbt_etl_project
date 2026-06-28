@@ -6,3 +6,7 @@ select
     booking_status,
     created_at
 from {{ ref('bronze_bookings') }}
+
+{% if is_incremental() %}
+  where CREATED_AT > (select coalesce(max(CREATED_AT), '1900-01-01') from {{ this }})
+{% endif %}

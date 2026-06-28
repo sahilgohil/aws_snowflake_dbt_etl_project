@@ -9,4 +9,8 @@ models:
       config:
         materialized: incremental
         unique_key: listing_id
+    - name: silver_hosts
+      config:
+        materialized: incremental
+        unique_key: host_id
       
