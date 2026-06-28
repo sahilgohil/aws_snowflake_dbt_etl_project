@@ -5,6 +5,7 @@ build/
 dist/
 wheels/
 *.egg-info
+snowflake_project\profiles.yml
 
 # Virtual environments
 .venv

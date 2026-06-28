@@ -37,3 +37,19 @@ models:
       +materialized: incremental
     silver:
       +schema: silver
+    gold:
+      +schema: gold
+
+
+vars:
+  obt_config:
+    base_model: "silver_bookings"
+    joins:
+      - join_model: "silver_listings"
+        join_type: "left"
+        join_alias: "listing"
+        join_on: "base.listing_id = listing.listing_id"
+      - join_model: "silver_hosts"
+        join_type: "left"
+        join_alias: "host"
+        join_on: "listing.host_id = host.host_id"
